@@ -8,8 +8,7 @@ const port = process.env.PORT || 8080
 app.use(express.json());
 app.use(cors());
 
-const Connection_url =
-  "mongodb+srv://test:test@cluster0.zlugu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const Connection_url = require("./config/keys").Connection_url ;
 
   mongoose.connect(Connection_url, {
     useNewUrlParser: true,
